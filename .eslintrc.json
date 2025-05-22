@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,      // o la versión que prefieras
+    "sourceType": "module",   // para que entienda `import`
+    "ecmaFeatures": {
+      "jsx": true             // para que entienda JSX
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"     // detectar versión de React
+    }
+  },
+  "rules": {
+    "semi": ["error", "never"]
+    // tus otras reglas…
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "standard"
+  ]
+}
