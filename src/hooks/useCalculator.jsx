@@ -17,7 +17,7 @@ export default function useCalculator() {
       case '/':
         return acc / cur
       case '%':
-        return acc % cur // <-- módulo
+        return acc % cur
       default:
         return cur
     }
