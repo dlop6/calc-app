@@ -1,28 +1,33 @@
 {
   "env": {
     "browser": true,
-    "es2021": true, 
+    "es2021": true,
     "jest": true
   },
   "parserOptions": {
-    "ecmaVersion": 2021,      // o la versión que prefieras
-    "sourceType": "module",   // para que entienda `import`
+    "ecmaVersion": 2021,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true             // para que entienda JSX
+      "jsx": true
     }
   },
   "settings": {
     "react": {
-      "version": "detect"     // detectar versión de React
+      "version": "detect"
     }
-  },
-  "rules": {
-    "semi": ["error", "never"]
-    // tus otras reglas…
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "standard"
-  ]
+    "standard",
+    "react-app",
+    "react-app/jest",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "react/prop-types": "off",
+    "testing-library/no-render-in-setup": "off"
+  }
 }

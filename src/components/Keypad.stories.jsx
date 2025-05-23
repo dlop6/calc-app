@@ -9,4 +9,6 @@ export default {
   }
 }
 
-export const Default = () => <Keypad onButtonClick={val => console.log(val)} />
+export const Default = () => (
+  <Keypad onButtonClick={(val) => console.log(val)} />
+)

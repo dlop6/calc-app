@@ -8,15 +8,11 @@ const buttonLabels = [
   ['0', '.', '=', '+'],
   ['%', '+/-', 'C']
 ]
-
-export default function Keypad ({ onButtonClick }) {
+export default function Keypad({ onButtonClick }) {
   return (
     <div className="keypad">
-      {buttonLabels.flat().map(label => (
-        <button
-          key={label}
-          onClick={() => onButtonClick(label)}
-        >
+      {buttonLabels.flat().map((label) => (
+        <button key={label} onClick={() => onButtonClick(label)}>
           {label}
         </button>
       ))}

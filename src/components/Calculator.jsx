@@ -3,13 +3,13 @@ import Display from './Display'
 import Keypad from './Keypad'
 import useCalculator from '../hooks/useCalculator'
 
-export default function Calculator () {
+export default function Calculator() {
   const { displayValue, handleInput } = useCalculator()
 
   return (
-        <div className="calculator">
-            <Display value={displayValue} />
-            <Keypad onButtonClick={handleInput} />
-        </div>
+    <div className="calculator">
+      <Display value={displayValue} />
+      <Keypad onButtonClick={handleInput} />
+    </div>
   )
 }

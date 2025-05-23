@@ -6,7 +6,7 @@ export default {
   component: Display
 }
 
-const Template = args => <Display {...args} />
+const Template = (args) => <Display {...args} />
 
 export const Zero = Template.bind({})
 Zero.args = { value: '0' }

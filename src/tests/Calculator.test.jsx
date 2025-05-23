@@ -4,11 +4,9 @@ import '@testing-library/jest-dom'
 import { render, screen, fireEvent, cleanup } from '@testing-library/react'
 import Calculator from '../components/Calculator'
 
-function clickKeys (keys) {
-  keys.forEach(key => {
-    fireEvent.click(
-      screen.getByRole('button', { name: key })
-    )
+function clickKeys(keys) {
+  keys.forEach((key) => {
+    fireEvent.click(screen.getByRole('button', { name: key }))
   })
 }
 

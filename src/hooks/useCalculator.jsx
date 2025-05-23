@@ -1,27 +1,33 @@
 import { useState } from 'react'
 
-export default function useCalculator () {
+export default function useCalculator() {
   const [displayValue, setDisplayValue] = useState('0')
   const [accumulator, setAccumulator] = useState(null) // numero anterior
   const [pendingOp, setPendingOp] = useState(null) // +, -, *, /
   const [waitingForOperand, setWaitingForOperand] = useState(false)
 
-  function operate (acc, cur, op) {
+  function operate(acc, cur, op) {
     switch (op) {
-      case '+': return acc + cur
-      case '-': return acc - cur
-      case '*': return acc * cur
-      case '/': return acc / cur
-      case '%': return acc % cur // <-- módulo
-      default: return cur
+      case '+':
+        return acc + cur
+      case '-':
+        return acc - cur
+      case '*':
+        return acc * cur
+      case '/':
+        return acc / cur
+      case '%':
+        return acc % cur // <-- módulo
+      default:
+        return cur
     }
   }
-  function toggleSign () {
+  function toggleSign() {
     if (displayValue === 'ERROR') return
     if (displayValue.startsWith('-')) {
       setDisplayValue(displayValue.slice(1))
     } else if (displayValue !== '0') {
-    // añade '-' si cabe
+      // añade '-' si cabe
       if (displayValue.length < 9) {
         setDisplayValue('-' + displayValue)
       } else {
@@ -30,7 +36,7 @@ export default function useCalculator () {
     }
   }
 
-  function performOperation (nextOp) {
+  function performOperation(nextOp) {
     const current = parseFloat(displayValue)
     let result
 
@@ -54,16 +60,16 @@ export default function useCalculator () {
     setWaitingForOperand(true)
   }
 
-  function inputDot () {
+  function inputDot() {
     if (waitingForOperand) {
       setDisplayValue('0.')
       setWaitingForOperand(false)
     } else if (!displayValue.includes('.') && displayValue.length < 9) {
-      setDisplayValue(prev => prev + '.')
+      setDisplayValue((prev) => prev + '.')
     }
   }
 
-  function inputDigit (digit) {
+  function inputDigit(digit) {
     if (waitingForOperand) {
       setDisplayValue(digit)
       setWaitingForOperand(false)
@@ -74,7 +80,7 @@ export default function useCalculator () {
     }
   }
 
-  function handleInput (buttonValue) {
+  function handleInput(buttonValue) {
     if (buttonValue === '+/-') {
       toggleSign()
       return
