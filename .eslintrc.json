@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true, 
+    "jest": true
   },
   "parserOptions": {
     "ecmaVersion": 2021,      // o la versión que prefieras
