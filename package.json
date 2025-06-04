@@ -2,9 +2,8 @@
   "name": "calc-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
-    "calc-app": "file:",
-    "cra-template-pwa": "2.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1"
@@ -12,16 +11,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --fix",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o storybook-static"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "test": "react-scripts test --env=jsdom"
   },
   "browserslist": {
     "production": [
@@ -33,34 +23,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^8.6.14",
-    "@storybook/preset-create-react-app": "^8.6.14",
-    "@storybook/react": "^8.6.14",
-    "@storybook/react-webpack5": "^8.6.14",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/react-hooks": "^7.0.2",
-    "ajv": "^6.12.6",
-    "ajv-keywords": "^3.5.2",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^17.19.0",
-    "eslint-plugin-prettier": "^5.4.0",
-    "eslint-plugin-promise": "^7.2.1",
-    "eslint-plugin-tailwindcss": "^3.18.0",
-    "jest": "^27.5.1",
-    "prettier": "^3.5.3",
-    "storybook": "^8.6.14"
-  },
-  "rules": {
-    "semi": [
-      "error",
-      "always"
     ]
   }
 }
